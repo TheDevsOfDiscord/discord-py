@@ -1,0 +1,7 @@
+discord
+typehint
+requests
+simpcalci
+python-dateutil
+googlesearch-python
+bs4
