@@ -1,9 +1,10 @@
 import discord
 import os
+from dotenv import load_dotenv
 from discord.ext import commands
 
-
-token = config.get('token')
+load_dotenv()
+token = os.getenv('token')
 intents = discord.Intents().all()
 bot = commands.Bot(command_prefix=commands.when_mentioned_or",", strip_after_prefix = True, intents = intents)
 
