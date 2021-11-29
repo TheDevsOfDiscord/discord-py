@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 from discord.ext import commands
 
 load_dotenv()
-token = os.getenv('token')
+token = os.getenv('TOKEN')
 intents = discord.Intents().all()
 bot = commands.Bot(command_prefix=commands.when_mentioned_or",", strip_after_prefix = True, intents = intents)
 
