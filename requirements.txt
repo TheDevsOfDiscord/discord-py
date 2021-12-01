@@ -6,3 +6,4 @@ python-dateutil
 googlesearch-python
 bs4
 python-dotenv
+discord-together
