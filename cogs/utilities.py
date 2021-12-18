@@ -3,7 +3,13 @@ from discord.ext import commands
 import random
 import requests 
 import aiohttp
+
 bot_embed_color = 0x4548a8
+
+with open('config.json') as f:
+    config = json.load(f)
+    
+NASA_API_KEY = config.get('NASA_API_KEY')
 
 class Utilities(commands.Cog):
 
@@ -149,6 +155,14 @@ class Utilities(commands.Cog):
         await ctx.reply(embed=embed)
       except:
         await ctx.reply("Please send a valid rating!! Valid parameters are `pg`,`pg13`,`r`")
+
+  @commands.command()
+  async def apod(self, ctx):
+    r = requests.get(f"https://api.nasa.gov/planetary/apod?api_key={NASA_API_KEY}")
+    res = r.json()
+    embed=discord.Embed(title=f"{res['title']}", description=f"{res['explanation']}", color=bot_embed_color)
+    embed.set_image(url=f"{res['hdurl']}")
+    await ctx.reply(embed=embed)
   
 def setup(bot):
   bot.add_cog(Utilities(bot))
