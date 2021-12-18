@@ -2,7 +2,6 @@ import discord
 from discord.ext import commands
 import random
 import requests 
-import LyricsScraper
 import aiohttp
 bot_embed_color = 0x4548a8
 
