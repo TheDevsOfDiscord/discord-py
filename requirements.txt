@@ -9,3 +9,4 @@ python-dotenv
 discord-together
 aiohttp
 aiofiles
+asyncio
