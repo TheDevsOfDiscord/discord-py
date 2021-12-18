@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 from discord.ext import commands
 
 load_dotenv()
+
 with open('config.json') as f:
     config = json.load(f)
     
