@@ -7,3 +7,5 @@ googlesearch-python
 bs4
 python-dotenv
 discord-together
+aiohttp
+aiofiles
