@@ -32,7 +32,7 @@ class Utilities(commands.Cog):
            artist = res['artist']
            lyrics = res['lyrics']
            source = res['source']
-           embed = disnake.Embed(title=f"**{title}**", description=f"**{artist}**\n\n\n{lyrics}\n", color=bot_embed_color)
+           embed = discord.Embed(title=f"**{title}**", description=f"**{artist}**\n\n\n{lyrics}\n", color=bot_embed_color)
            embed.set_footer(text=f"Source: {source}")
            await wait.edit(embed=embed)
        except:
